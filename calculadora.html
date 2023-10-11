@@ -15,7 +15,8 @@
         <br><br>
         <label for="n2">Segundo Número</label>
         <input type="number" id="n2">
-        <br><br>
+        
+        <p>Resultado:<strong id="result"></strong></p>
 
         <label for="operacao">Operação</label>
         <select id="operacao">
@@ -26,50 +27,11 @@
             <option value="/">Divisão</option>
         </select>
         <br><br>
-        <button >Calcular</button>  
+        <button type="submit">Calcular</button>  
     </form>
 
-    <script>
-        function calcular(){
+    <script src="./scripts/calculadora.js">
         
-            //criar uma variavel para cada numero 
-            let n1 = parseFloat(document.getElementById('n1').value);
-            let n2 = parseFloat(document.getElementById('n2').value);
-            let op = document.getElementById('operacao').value;
-            let resultado;
-
-            if (op == '+') {
-                let resultado = somar(n1,n2);
-            } else if (op == '-') {
-                resultado = subtrair(n1,n2);
-            } 
-              else if(op == '*') {
-                resultado = multiplicar(n1,n2);
-            } 
-
-             else if (op == '/') {
-                resultado = dividir(n1,n2);
-            } 
-            //criar uma variavel com o resultado da soma
-            // const resultado = n1 + n2;
-
-            //exibir o resultado em uma alert - ultilizar a interpolação
-             alert(`Resultado da operação é: ${resultado}`)
-
-        }
-        function somar(x,y){
-            return x + y;
-        }
-
-        function subtrair(x,y){
-            return x - y;
-        }
-        function multiplicar(x,y){
-            return x * y;
-        }
-        function dividir(x,y){
-            return x / y;
-        }
-    </script>
+    </script> 
 </body>
 </html>
